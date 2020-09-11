@@ -12,6 +12,7 @@ services:
     volumes:
       - /data/redmine/data_dir/files:/usr/src/redmine/files
       - /data/redmine/data_dir/plugins:/usr/src/redmine/plugins
+      - /data/redmine/data_dir/plugins/redmine_agile/wp-init.sh:/usr/src/redmine/plugins/redmine_agile/wp-init.sh
   db:
     image: mysql:5.7
     restart: always
