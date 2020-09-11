@@ -7,11 +7,16 @@ services:
       - 8080:3000
     environment:
       REDMINE_DB_MYSQL: db
-      REDMINE_DB_PASSWORD: example
-      REDMINE_SECRET_KEY_BASE: supersecretkey
+      REDMINE_DB_PASSWORD: k85_db@R00t!
+      REDMINE_SECRET_KEY_BASE: k85_db@R00t!
+    volumes:
+      - /data/redmine/data_dir/files:/usr/src/redmine/files
+      - /data/redmine/data_dir/plugins:/usr/src/redmine/plugins
   db:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: k85_db@R00t!
       MYSQL_DATABASE: redmine
+    volumes:
+      - /data/redmine/db:/var/lib/mysql
