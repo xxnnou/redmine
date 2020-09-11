@@ -9,3 +9,7 @@
 #
 # 2.Then build redmine by runnig the command 
 docker-compose up -d 
+# 
+# default redmine username and password
+# username: admin 
+# password: admin
